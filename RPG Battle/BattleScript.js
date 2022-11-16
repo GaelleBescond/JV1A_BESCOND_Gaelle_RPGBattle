@@ -5,14 +5,40 @@
 
 
 
-//Personnage1
-DivPersonnage1 = document.getElementById("DivPersonnage1");
-HPPersonnage1 = document.getElementById("HPPersonnage1");
+//Personnage1: Yann
+DivYann = document.getElementById("DivYann");
+HPYann = document.getElementById("HPYann");
+DivYann.onclick = function() {
+    afficheAction.innerHTML = "Vous sélectionnez Yann";
+    }
 
-//Sélection personnage
+//Personnage2: Baptiste
+DivBaptiste = document.getElementById("DivBaptiste");
+HPBaptiste = document.getElementById("HPBaptiste");
+DivBaptiste.onclick = function() {
+    afficheAction.innerHTML = "Vous sélectionnez Baptiste";
+    }
+
+//Personnage3: Guenole
+DivGuenole = document.getElementById("DivGuenole");
+HPGuenole = document.getElementById("HPGuenole");
+DivGuenole.onclick = function() {
+    afficheAction.innerHTML = "Vous sélectionnez Guenole";
+    }
+
+//Personnage4: Marie
+DivMarie = document.getElementById("DivMarie");
+HPMarie = document.getElementById("HPMarie");
+DivMarie.onclick = function() {
+    afficheAction.innerHTML = "Vous sélectionnez Marie";
+    }
+
+//Actualisation Dialogue
 afficheAction.onclick = function() {
     afficheAction.innerHTML = "Blabla!";
 }
+
+
 
 
 //Action attaque
@@ -37,9 +63,3 @@ ActionPersonnagePouvoir.onclick = function() {
 //Monstre 1
 DivMonstre1 = document.getElementById("DivMonstre1");
 HPMonstre1 = document.getElementById("HPMonstre1");
-
-    //Monstre riposte pas au clic mais APRES toutes les actions joueurs
-DivMonstre1.onclick = function() {
-  //  HPMonstre1.innerHTML = HPMonstre1.innerHTML-10;
-  //  afficheAction.innerHTML = "Monstre 1 perd 10 hp!";
-}

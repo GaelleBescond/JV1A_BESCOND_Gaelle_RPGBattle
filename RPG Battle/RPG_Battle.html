@@ -6,33 +6,46 @@
         <link href="styleRPGBattle.css" media="all" rel="stylesheet" type="text/css" />
         <script src="BattleScript.js" async></script>
     </head>
-
-<body>
-    <Scene>
-        <Personnage>
-            <name>Personnage1</name>
-            <divP id="DivPersonnage1">Illustration</divP>
-            <divHP id="HPPersonnage1">100</divHP>
-        </Personnage>
-    
-        <Monstre>
-            <name>Monstre1</name>
-            <divP id="DivMonstre1">Illustration</divP>
-            <divHP id="HPMonstre1">100</divHP>
-        </Monstre>
-    </Scene>
-    <Interface>
-        <Description>
-            <divD id="afficheAction"></divD>
-        </Description>
-    
-        <MenuAction>
-            <divA id="ActionPersonnageAttaque">Attaque</divA>
-            <divA id="ActionPersonnageDefense">Defense</divA>
-            <divA id="ActionPersonnagePouvoir">Pouvoir</divA>
-        </MenuAction>
-    </Interface>
-    
-</body>
-
+    <body>
+        <Scene>
+            <Equipe>
+                <Personnage>
+                    <name>Yann</name>
+                    <divP id="DivYann">Illustration</divP>
+                    <divHP id="HPYann">100</divHP>
+                </Personnage>
+                <Personnage>
+                    <name>Baptiste</name>
+                    <divP id="DivBaptiste">Illustration</divP>
+                    <divHP id="HPBaptiste">100</divHP>
+                </Personnage>
+                <Personnage>
+                    <name>Guenole</name>
+                    <divP id="DivGuenole">Illustration</divP>
+                    <divHP id="HPGuenole">100</divHP>
+                </Personnage>
+                <Personnage>
+                    <name>Marie</name>
+                    <divP id="DivMarie">Illustration</divP>
+                    <divHP id="HPMarie">100</divHP>   
+                </Personnage>             
+            </Equipe>
+            <Monstres>
+                <name>Monstre1</name>
+                <divP id="DivMonstre1">Illustration</divP>
+                <divHP id="HPMonstre1">100</divHP>
+            </Monstres>
+        </Scene>
+        <Interface>
+            <Description>
+                <divD id="afficheAction"></divD>
+            </Description>
+        
+            <MenuAction>
+                <divA id="ActionPersonnageAttaque">Attaque</divA>
+                <divA id="ActionPersonnageDefense">Defense</divA>
+                <divA id="ActionPersonnagePouvoir">Pouvoir</divA>
+            </MenuAction>
+        </Interface>    
+    </body>
 </html>
