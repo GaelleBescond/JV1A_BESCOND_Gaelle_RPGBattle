@@ -1,33 +1,13 @@
 
-
     afficheAction = document.getElementById("afficheAction");
     afficheAction.innerHTML = "Le combat commence!";
 
     
 //Actualisation Dialogue
 afficheAction.onclick = function() {
-    afficheAction.innerHTML = "Blabla!";
+    afficheAction.innerHTML = "Sélectionnez un personnage, puis l'action qu'il doit effectuer.";
 }
 
-//Actions possibles
-    //Action attaque
-    ActionPersonnageAttaque.onclick = function() {
-        HPMonstre1.innerHTML = HPMonstre1.innerHTML-10;
-        HPMonstre1 = document.getElementById("HPMonstre1");
-        afficheAction.innerHTML = "Monstre 1 perd 10 hp!";
-    }
-    //Action défense
-    ActionPersonnageDefense.onclick = function() {
-        HPMonstre1 = document.getElementById("HPMonstre1");
-        afficheAction.innerHTML = "Personnage 1 se protège!";
-    }
-
-    //Action Pouvoir
-    ActionPersonnagePouvoir.onclick = function() {
-        HPMonstre1.innerHTML = HPMonstre1.innerHTML-40;
-        HPMonstre1 = document.getElementById("HPMonstre1");
-        afficheAction.innerHTML = "Monstre 1 perd 40 hp!";
-    }
 //Personnages
     //Personnage1: Yann
     DivYann = document.getElementById("DivYann");
@@ -41,7 +21,6 @@ afficheAction.onclick = function() {
     HPBaptiste = document.getElementById("HPBaptiste");
     DivBaptiste.onclick = function() {
         afficheAction.innerHTML = "Vous sélectionnez Baptiste";
-
         }
 
     //Personnage3: Guenole
@@ -57,7 +36,40 @@ afficheAction.onclick = function() {
     DivMarie.onclick = function() {
         afficheAction.innerHTML = "Vous sélectionnez Marie";
         }
+
 //Monstres
     //Monstre1 
     DivMonstre1 = document.getElementById("DivMonstre1");
     HPMonstre1 = document.getElementById("HPMonstre1");
+
+//Actions possibles
+    //Action attaque
+    ActionPersonnageAttaque.onclick = function(Attaque) {
+        afficheAction.innerHTML = "Sélectionnez une cible";
+        x = true;
+
+    }
+    //Action défense
+    ActionPersonnageDefense.onclick = function(Defense) {
+        afficheAction.innerHTML = "Sélectionnez une cible";
+        HPMonstre1 = document.getElementById("HPMonstre1");
+        afficheAction.innerHTML = "Personnage 1 se protège!";
+    }
+
+    //Action Pouvoir
+    ActionPersonnagePouvoir.onclick = function(Pouvoir) {
+        afficheAction.innerHTML = "Sélectionnez une cible";
+  
+    }
+
+    DivMonstre1.onclick = function(){
+        if (x== true) {
+            HPMonstre1.innerHTML = HPMonstre1.innerHTML-40;
+            HPMonstre1 = document.getElementById("HPMonstre1");
+            afficheAction.innerHTML = "Monstre 1 perd 40 hp!";
+            x = false
+        }
+        else {            
+            afficheAction.innerHTML = "C'est un monstre";
+        }
+    }
