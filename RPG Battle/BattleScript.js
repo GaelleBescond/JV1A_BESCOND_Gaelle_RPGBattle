@@ -1,3 +1,7 @@
+//setTimeout(() => { 
+//}, timeout);
+
+
 
     afficheAction = document.getElementById("afficheAction");
     afficheAction.innerHTML = "Le combat commence!";
@@ -7,6 +11,7 @@
 afficheAction.onclick = function() {
     afficheAction.innerHTML = "Sélectionnez un personnage, puis l'action qu'il doit effectuer.";
 }
+
 
 //Personnages
     //Personnage1: Yann
@@ -45,7 +50,7 @@ afficheAction.onclick = function() {
 //Actions possibles
     //Action attaque
     ActionPersonnageAttaque.onclick = function(Attaque) {
-        afficheAction.innerHTML = "Sélectionnez une cible";
+        afficheAction.innerHTML = "Sélectionnez une cible à attaquer";
         x = true;
 
     }
@@ -53,12 +58,12 @@ afficheAction.onclick = function() {
     ActionPersonnageDefense.onclick = function(Defense) {
         afficheAction.innerHTML = "Sélectionnez une cible";
         HPMonstre1 = document.getElementById("HPMonstre1");
-        afficheAction.innerHTML = "Personnage 1 se protège!";
+        afficheAction.innerHTML = "Sélectionnez une cible à protéger";
     }
 
     //Action Pouvoir
     ActionPersonnagePouvoir.onclick = function(Pouvoir) {
-        afficheAction.innerHTML = "Sélectionnez une cible";
+        afficheAction.innerHTML = "Sélectionnez une cible pour le pouvoir";
   
     }
 
