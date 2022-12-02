@@ -25,6 +25,8 @@ body{
 
 Name{
     color: rgb(125, 192, 197);
+    font-size: large;
+    align-items: center;
 }
 
 Scene {
@@ -88,14 +90,10 @@ DivSP{
     width: 100px;
 }
 .hp-monstre{
-    color: rgba(0,0,0,0);
-    background-color: rgb(0,0,0,0);
-}
-
-.hp-monstre:hover{
     color: rgba(0,0,0,255);
     background-color: rgba(205,0,0,255);
 }
+
 
 MenuAction {
     display: flex;
