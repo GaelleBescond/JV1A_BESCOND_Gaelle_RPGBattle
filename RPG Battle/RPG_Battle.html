@@ -10,47 +10,59 @@
     <body>
         <Scene>
             <Equipe>
-                <Personnage>
-                    <name id="PersonnageYann">Yann</name>
+                <Personnage id="PersonnageYann">
+                    <name>Yann</name>
                     <img class="fit-character" id="DivYann" src="sample_character_01.png"alt="Illustration">
                     <divHP id="HPYann">50</divHP>
                     <divSP id="SPYann">100</divSP>
                 </Personnage>
-                <Personnage>
+                <Personnage id="Baptiste">
                     <name>Baptiste</name>
                     <img class="fit-character" id="DivBaptiste" src="sample_character_02.png"alt="Illustration">
-                    <divHP id="HPBaptiste">100</divHP>
+                    <divHP id="HPBaptiste">75</divHP>
                     <divSP id="SPBaptiste">100</divSP>
                 </Personnage>
-                <Personnage>
+                <Personnage id="Guenole">
                     <name>Guenole</name>
                     <img class="fit-character" id="DivGuenole" src="sample_character_03.png"alt="Illustration">
-                    <divHP id="HPGuenole">100</divHP>
+                    <divHP id="HPGuenole">50</divHP>
                     <divSP id="SPGuenole">100</divSP>
                 </Personnage>
-                <Personnage>
+                <Personnage id="Marie">
                     <name>Marie</name>
                     <img class="fit-character" id="DivMarie" src="sample_character_04.png"alt="Illustration">
                     <divHP id="HPMarie">100</divHP>   
                     <divSP id="SPMarie">100</divSP>
                 </Personnage>             
             </Equipe>
-            <Monstres>
-                <name id="MonstreGabin">Gabin</name>
-                <img class="fit-character" id="DivGabin"src="dorver-idle0.png" alt="Illustration">
-                <divHP class="hp-monstre" id="HPGabin">100</divHP>
-            </Monstres>
+            <Ennemis>
+                <Monstres id="MonstreGabin">
+                    <name>Gabin</name>
+                    <img class="fit-character" id="DivGabin"src="dorver-idle0.png" alt="Illustration">
+                    <divHP class="hp-monstre" id="HPGabin">100</divHP>
+                </Monstres> 
+                <Monstres id="MonstreGrosGabin">
+                    <name >GrosGabin</name>
+                    <img class="fit-character" id="DivGrosGabin"src="dorver-idle0.png" alt="Illustration">
+                    <divHP class="hp-monstre" id="HPGrosGabin">200</divHP>
+                </Monstres>
+                <Monstres id="MonstrePetitGabin">
+                    <name>PetitGabin</name>
+                    <img class="fit-character" id="DivPetitGabin"src="dorver-idle0.png" alt="Illustration">
+                    <divHP class="hp-monstre" id="HPPetitGabin">50</divHP>
+                </Monstres>
+            </Ennemis>
         </Scene>
         <Interface>
             <Description>
                 <divD id="afficheAction"></divD>
             </Description>
         
-            <MenuAction>
+            <div id="MenuAction">
                 <divA id="ActionPersonnageAttaque">A</divA>
                 <divA id="ActionPersonnageDefense">D</divA>
                 <divA id="ActionPersonnagePouvoir">P</divA>
-            </MenuAction>
+            </div>
         </Interface>    
     </body>
 </html>
