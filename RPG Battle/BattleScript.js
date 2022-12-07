@@ -32,18 +32,19 @@ let DisplayPetitGabin = [document.getElementById("PersonnagePetitGabin"),documen
 //Zone d'affichage de texte
 let afficheAction = document.getElementById("afficheAction");
 
-//Définition des variables utiles personnage [HP, Mana, Alive]
-let VarYann = [50,100,true]
-let VarBaptiste = [75,100,true]
-let VarGuenole = [50,100,true]
-let VarMarie = [100,100,true]
+//Définition des variables utiles personnage [HP, Mana, Alive, CooldownAttaque, CooldownDefense, CooldownSpecial]
+let VarYann = [50,100,true,false,false,false]
+let VarBaptiste = [75,100,true,false,false,false]
+let VarGuenole = [50,100,true,false,false,false]
+let VarMarie = [100,100,true,false,false,false]
 
-//Définition des variables utiles Monstre [HP, Mana; Alive]
+//Définition des variables utiles Monstre [HP, Mana, Alive]
 let VarGabin = [50,0,true]
 let VarGrosGabin = [100,0,true]
 let VarPetitGabin =[30,0,true]
 
 //Définition des variables d'algo
+let CompteurRound = 0
 //let 
 
 
@@ -54,14 +55,12 @@ DivGabin.onmouseover = function(){
 DivGabin.onmouseout= function(){
     HPGabin.style.visibility = 'hidden';
 }
-
 DivGrosGabin.onmouseover = function(){
     HPGrosGabin.style.visibility = 'visible';
 }
 DivGrosGabin.onmouseout= function(){
     HPGrosGabin.style.visibility = 'hidden';
 }
-
 DivPetitGabin.onmouseover = function(){
     HPPetitGabin.style.visibility = 'visible';
 }
@@ -69,11 +68,13 @@ DivPetitGabin.onmouseout= function(){
     HPPetitGabin.style.visibility = 'hidden';
 }
 
+//Ajouter les while dans les tours de joueurs (tant qu'ils n'ont pas joué, variable de check ou usage du compteur?)
+
 
 //Tour joueur 1: Yann
 function YannTurn(){
     //Si yann est vivant il peut jouer
-    if (VarYann[0] > 0 && VarYann[2] == true && Round){
+    if (VarYann[0] > 0 && VarYann[2] == true && CompteurRound == 1){
         afficheAction.innerHTML = "C'est au tour de Yann de jouer.";
         ActionPersonnageAttaque.style.visibility = 'visible';
     }    
@@ -83,12 +84,13 @@ function YannTurn(){
         DisplayYann[0].style.visibility = 'hidden';
         VarYann[2] = false ;
     }
+    CompteurRound += 1;
 }
 
 //Tour joueur 2: Baptiste
 function BaptisteTurn(){
     //Si Baptiste est vivant il peut jouer
-    if (VarBaptiste[0] > 0 && VarBaptiste[2] == true){
+    if (VarBaptiste[0] > 0 && VarBaptiste[2] == true && CompteurRound == 2){
         afficheAction.innerHTML = "C'est au tour de Baptiste de jouer.";
         ActionPersonnageAttaque.style.visibility = 'visible';
     }
@@ -98,12 +100,13 @@ function BaptisteTurn(){
         DisplayYann[0].style.visibility = 'hidden';
         VarBaptiste[2] = false ;
     }
+    CompteurRound += 1;
 }
 
 //Tour joueur 3: Guenole
 function GuenoleTurn(){
     //Si Guenole est vivant il peut jouer
-    if (VarGuenole[0] > 0 && VarGuenole[2] == true){
+    if (VarGuenole[0] > 0 && VarGuenole[2] == true && CompteurRound == 3){
         afficheAction.innerHTML = "C'est au tour de Guenole de jouer.";
         ActionPersonnageAttaque.style.visibility = 'visible';
     }
@@ -113,12 +116,13 @@ function GuenoleTurn(){
         DisplayYann[0].style.visibility = 'hidden';
         VarGuenole[2] = false ;
     }
+    CompteurRound += 1;
 }
 
 //Tour joueur 4: Marie
 function MarieTurn(){
     //Si Marie est vivante elle peut jouer
-    if (VarMarie[0] > 0 && VarMarie[2] == true){
+    if (VarMarie[0] > 0 && VarMarie[2] == true && CompteurRound == 4){
         afficheAction.innerHTML = "C'est au tour de Marie de jouer.";
         ActionPersonnageAttaque.style.visibility = 'visible';
     }
@@ -128,6 +132,8 @@ function MarieTurn(){
         DisplayYann[0].style.visibility = 'hidden';
         VarMarie[2] = false ;
     }
+
+    CompteurRound += 1;
 }
 
 
@@ -216,9 +222,15 @@ function monstresTurn (){
 //Définition d'un Round
 function Round(){
     //Un compteur (à implémenter) s'assure que les personnages ont bien tous joué (chacun a son propre numéro)
-    personnagesTurn();
+    while (CompteurRound < 4){
+    personnagesTurn();    
+    }
     //Si le compteur du round est à 4, on réinitialise, puis au tour des monstres, même méthode jusqu'à 3
+    CompteurRound = 0;
+    while (CompteurRound <3){
     monstresTurn();
+    }
+    CompteurRound = 0;
 }
 
 //Préparation du combat
