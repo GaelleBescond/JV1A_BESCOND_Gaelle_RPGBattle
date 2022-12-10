@@ -4,7 +4,6 @@
         <title>RPG Battle</title>
         <meta charset="utf-8" />
         <link href="styleRPGBattle.css" media="all" rel="stylesheet" type="text/css" />
-        <script src="BattleScript.js" async></script>
     </head>
 
     <body>
@@ -16,19 +15,19 @@
                     <divHP id="HPYann">50</divHP>
                     <divSP id="SPYann">100</divSP>
                 </Personnage>
-                <Personnage id="Baptiste">
+                <Personnage id="PersonnageBaptiste">
                     <name>Baptiste</name>
                     <img class="fit-character" id="DivBaptiste" src="sample_character_02.png"alt="Illustration">
                     <divHP id="HPBaptiste">75</divHP>
                     <divSP id="SPBaptiste">100</divSP>
                 </Personnage>
-                <Personnage id="Guenole">
+                <Personnage id="PersonnageGuenole">
                     <name>Guenole</name>
                     <img class="fit-character" id="DivGuenole" src="sample_character_03.png"alt="Illustration">
                     <divHP id="HPGuenole">50</divHP>
                     <divSP id="SPGuenole">100</divSP>
                 </Personnage>
-                <Personnage id="Marie">
+                <Personnage id="PersonnageMarie">
                     <name>Marie</name>
                     <img class="fit-character" id="DivMarie" src="sample_character_04.png"alt="Illustration">
                     <divHP id="HPMarie">100</divHP>   
@@ -39,30 +38,36 @@
                 <Monstres id="MonstreGabin">
                     <name>Gabin</name>
                     <img class="fit-character" id="DivGabin"src="dorver-idle0.png" alt="Illustration">
-                    <divHP class="hp-monstre" id="HPGabin">100</divHP>
+                    <divHP class="hp-monstre" id="HPGabin">50</divHP>
                 </Monstres> 
                 <Monstres id="MonstreGrosGabin">
                     <name >GrosGabin</name>
                     <img class="fit-character" id="DivGrosGabin"src="dorver-idle0.png" alt="Illustration">
-                    <divHP class="hp-monstre" id="HPGrosGabin">200</divHP>
+                    <divHP class="hp-monstre" id="HPGrosGabin">100</divHP>
                 </Monstres>
                 <Monstres id="MonstrePetitGabin">
                     <name>PetitGabin</name>
                     <img class="fit-character" id="DivPetitGabin"src="dorver-idle0.png" alt="Illustration">
-                    <divHP class="hp-monstre" id="HPPetitGabin">50</divHP>
+                    <divHP class="hp-monstre" id="HPPetitGabin">30</divHP>
                 </Monstres>
             </Ennemis>
         </Scene>
-        <Interface>
-            <Description>
-                <divD id="afficheAction"></divD>
-            </Description>
-        
-            <div id="MenuAction">
-                <divA id="ActionPersonnageAttaque">A</divA>
-                <divA id="ActionPersonnageDefense">D</divA>
-                <divA id="ActionPersonnagePouvoir">P</divA>
-            </div>
-        </Interface>    
+        <bidule>
+            <Interface>
+                <Description>
+                    <divD id="afficheAction"></divD>
+                </Description>
+                <ul id="ListeCibles">
+                </ul>
+                
+                <div id="MenuAction">
+                    <divA id="ActionPersonnageAttaque">A</divA>
+                    <divA id="ActionPersonnageDefense">D</divA>
+                    <divA id="ActionPersonnagePouvoir">P</divA>
+                </div>
+            </Interface>    
+        </bidule>
     </body>
 </html>
+
+<script src="BattleScript2.js" ></script>
